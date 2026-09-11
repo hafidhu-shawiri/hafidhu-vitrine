@@ -12,7 +12,9 @@
     "assets": "node scripts/prepare-assets.mjs",
     "check:terms": "node scripts/check-forbidden-terms.mjs",
     "check:secrets": "node scripts/check-client-secrets.mjs",
-    "verify": "npm run typecheck && npm run check:terms && npm run check:secrets"
+    "verify": "npm run typecheck && npm run check:terms && npm run check:secrets",
+    "test:interactions": "node scripts/test-interactions.mjs",
+    "capture": "node scripts/capture.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.7.0",

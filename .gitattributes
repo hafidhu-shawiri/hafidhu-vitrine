@@ -1,0 +1,15 @@
+# Normalise les fins de ligne : le dépôt stocke en LF, quelle que soit
+# la plateforme de développement. Évite les différences parasites entre
+# Windows, macOS et la construction sur Vercel.
+* text=auto eol=lf
+
+# Fichiers binaires : aucune conversion.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.avif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
