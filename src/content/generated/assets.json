@@ -1,0 +1,1021 @@
+{
+  "generatedBy": "scripts/prepare-assets.mjs",
+  "note": "Fichier généré. Ne pas éditer à la main — relancer « npm run assets ». Aucune image n’a été créée, retouchée ni recadrée : conversion et redimensionnement uniquement.",
+  "logos": {
+    "logo-horizontal": {
+      "width": 1981,
+      "height": 577
+    },
+    "logo-square": {
+      "width": 426,
+      "height": 473
+    },
+    "favicon-source": {
+      "width": 426,
+      "height": 476
+    }
+  },
+  "counts": {
+    "total": 77,
+    "landscape": 21,
+    "portrait": 56
+  },
+  "hero": {
+    "parures": {
+      "id": "image-hero-01-mtawo-wa-dhahabu-or",
+      "src": "/images/galerie/image-hero-01-mtawo-wa-dhahabu-or.webp",
+      "width": 1109,
+      "height": 1419,
+      "orientation": "portrait",
+      "folder": "Zone Hero",
+      "category": "Parures & patrimoine",
+      "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAQCdASoMAA8AA8BgJbACdAEfTW8qsMAA/DujLxypdzLX/T/j4Li2FoLg3rYWpNC6VPHPqATN0B2XpuYwMP0iLTvvRUvYUk9z40+fcOnDE8QvYttebXsae+v4s82RQAA="
+    },
+    "couple": {
+      "id": "image-hero-02-couple-de-notable",
+      "src": "/images/galerie/image-hero-02-couple-de-notable.webp",
+      "width": 1271,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Zone Hero",
+      "category": "Parures & patrimoine",
+      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoMABEAPwForE6rJaQiMAgBYCAJbACdAdwAkwepoHe3gNmIAPr/co4oXQa2H9fKg2nT3pLLDmQn8TCxVeQpftggseF7bHwAQOUmURZjW9XGupj1tr/J+PX7yjn9Ts/lcicDy3HBMnnupGZv7LRBdL0AAAA="
+    }
+  },
+  "cles": {
+    "famille": {
+      "id": "famille-comorienne",
+      "src": "/images/galerie/famille-comorienne.webp",
+      "width": 1448,
+      "height": 1086,
+      "orientation": "landscape",
+      "folder": "Images clés",
+      "category": "Vie familiale",
+      "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoMAAkAA8BgJZgCdADcnFC0f4AA/rIFq6RE+3Kyosl3EvZ/5HlN4CjaNRgM8NzyGT7xtHO7dlCroD4HsMQSN5HVKLKASF5r16wC3IN5egAAAA=="
+    },
+    "diaspora": {
+      "id": "diaspora-comorien",
+      "src": "/images/galerie/diaspora-comorien.webp",
+      "width": 1448,
+      "height": 1086,
+      "orientation": "landscape",
+      "folder": "Images clés",
+      "category": "Vie familiale",
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoMAAkAA8BgJYgCdAD0r/JAf3gAAP51mBgYUf+uV52VqKI2327dP4HkEYkhHJpN/0UhDC9dYrqS07ccyattDEa0BSM9gdfZmgRQNAAA"
+    },
+    "mafunvu": {
+      "id": "mafunvu",
+      "src": "/images/galerie/mafunvu.webp",
+      "width": 1448,
+      "height": 1086,
+      "orientation": "landscape",
+      "folder": "Images clés",
+      "category": "Vie familiale",
+      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoMAAkAA8BgJaACdAYoBZmuHwAA/pRBfO+COBK1VPlz/FnNcQMlDsXTTN5cxec2iKb3pS33yCXB/hL6PD9NTgndQmtMhulfSwd6NdjaXH7+Lt6AAAA="
+    }
+  },
+  "themes": {
+    "ceremonies": [
+      {
+        "id": "ceremonie-01-madjilis",
+        "src": "/images/galerie/ceremonie-01-madjilis.webp",
+        "width": 1800,
+        "height": 1350,
+        "orientation": "landscape",
+        "folder": "Céremonies",
+        "category": "Cérémonies",
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoMAAkAA8BgJQBOkCYidZz1uAQAAPqeG2PB6zKzHP00tuuRLAa0/9fv1mMABeyGJ8PHwXjsLCEsvq3KWGaO0luGKK7t9AJNYO4xHXhfmmZcjYgGnnChbAdAAAA="
+      },
+      {
+        "id": "ceremonie-02-madjilis",
+        "src": "/images/galerie/ceremonie-02-madjilis.webp",
+        "width": 1800,
+        "height": 1350,
+        "orientation": "landscape",
+        "folder": "Céremonies",
+        "category": "Cérémonies",
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoMAAkAA8BgJbACdAEWP8UfwRmOAAD45B55liniu8pkAcA5AFerFQYrUUpKiJvD5wdkw/Z0acyJ6a/2xvknhvfTxJQlNpgr0SgOAAAA"
+      },
+      {
+        "id": "ceremonie-03-madjilis",
+        "src": "/images/galerie/ceremonie-03-madjilis.webp",
+        "width": 1350,
+        "height": 1800,
+        "orientation": "portrait",
+        "folder": "Céremonies",
+        "category": "Cérémonies",
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoMABAAA8BgJaACdADJ+BpyG1tBUAD3LK72ojOvhJ4FRx3XZG98zQCNqbLsarx4nqxzuJwAKMx7dM467BDJWhv0q+OtI7ukWaP9pBj4v5wUFE5T9YAAAA=="
+      },
+      {
+        "id": "ceremonie-04-madjilis",
+        "src": "/images/galerie/ceremonie-04-madjilis.webp",
+        "width": 1800,
+        "height": 1350,
+        "orientation": "landscape",
+        "folder": "Céremonies",
+        "category": "Cérémonies",
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoMAAkAA8BgJYwAAsaLlkFeAAD+7PGuU5eNioQqf0jV30wU5OUpzcu1fE9azldY3e0gRd80HpHj74PL2BQTREAvqxCJhwAA"
+      },
+      {
+        "id": "ceremonie-05-madjilis",
+        "src": "/images/galerie/ceremonie-05-madjilis.webp",
+        "width": 1800,
+        "height": 1350,
+        "orientation": "landscape",
+        "folder": "Céremonies",
+        "category": "Cérémonies",
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoMAAkAA8BgJQBOgCPV25vuUSAA+Fst0ncDlysMsGWw5JvOAKWsBTS4PcT3B/xOLJY3Hev9zPENy9aQWjF+/dlg63ixTzBdzDZL0TGcAAA="
+      }
+    ],
+    "notables": [
+      {
+        "id": "notable-01",
+        "src": "/images/galerie/notable-01.webp",
+        "width": 720,
+        "height": 960,
+        "orientation": "portrait",
+        "folder": "Notables Comoriens",
+        "category": "Notables",
+        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoMABAAA8BgJbACdADyhF40iOoAAP5IAsnp8Sz+I0LQ8eFu6piD0kj5+kIFdVmzvNztIbchDaLnSlNxlNLL2irtqq70U58Zb27L2OgDYuENO2tAAAA="
+      },
+      {
+        "id": "notable-02",
+        "src": "/images/galerie/notable-02.webp",
+        "width": 1350,
+        "height": 1800,
+        "orientation": "portrait",
+        "folder": "Notables Comoriens",
+        "category": "Notables",
+        "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQAgCdASoMABAAA8BgJbACdAYrdZ/vPMD/3kAA9r9gj/zihqf0061El9wjMAK8g1lFMmcztBK4eVqedK0pztTDoznIaI+mUawYwH3Zh8jVTQrbgTZqtfgDJSbQ43t7XfKP7KEEy8N5GJFfCbsAAA=="
+      },
+      {
+        "id": "notable-03",
+        "src": "/images/galerie/notable-03.webp",
+        "width": 1350,
+        "height": 1800,
+        "orientation": "portrait",
+        "folder": "Notables Comoriens",
+        "category": "Notables",
+        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwAgCdASoMABAAA8BgJagCdAYr7awdjHIuYAD+herMpWahNzBW5vDIo3x53TOeu2m4virmvRS4NRH4iDk5r6ZJHzbHZkGvKQTnYEbf1oNW2OiL1AxgZ2D6cugYX+EMKVrfQ0QAAAA="
+      },
+      {
+        "id": "notable-04",
+        "src": "/images/galerie/notable-04.webp",
+        "width": 1350,
+        "height": 1800,
+        "orientation": "portrait",
+        "folder": "Notables Comoriens",
+        "category": "Notables",
+        "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwAgCdASoMABAAA8BgJagCdAYuRyJHFx9AAAD+qht32GUaoXHPQkrpwCTdkgDAFPafTL1HxHS8+IR+/csWp9DJcu91sGfiuHbd7wdOt0S43n1h5cu/iWlVwawhAJQYL7Wt8YmGAWjgQnaAAAA="
+      },
+      {
+        "id": "notable-05",
+        "src": "/images/galerie/notable-05.webp",
+        "width": 1350,
+        "height": 1800,
+        "orientation": "portrait",
+        "folder": "Notables Comoriens",
+        "category": "Notables",
+        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoMABAAA8BgJbACdAYulwVtg9w2UAAA/IvivllQiDEJhnBrIMFyhg7NZHgl/RN9d8WWsmB4oeCN/ldvtDhrw1sphZ2b44ZHS1BsUw2Wkqc/5kRh5CPqt1WLloYAAA=="
+      }
+    ],
+    "mari": [
+      {
+        "id": "boinaharusi-01-mari",
+        "src": "/images/galerie/boinaharusi-01-mari.webp",
+        "width": 1350,
+        "height": 1800,
+        "orientation": "portrait",
+        "folder": "Mari Notable",
+        "category": "Grand Mariage",
+        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoMABAAA8BgJagCdAEDfQaXn1IA9p10fI/F0t+B1C8FjYJ+Qm17zj4kvL9fu65mORGVAOHcdsu0II/WD3U//+bh2VBmnlYfyPB9chylYJR8YXgA"
+      },
+      {
+        "id": "boinaharusi-02-mari",
+        "src": "/images/galerie/boinaharusi-02-mari.webp",
+        "width": 1350,
+        "height": 1800,
+        "orientation": "portrait",
+        "folder": "Mari Notable",
+        "category": "Grand Mariage",
+        "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQAgCdASoMABAAA8BgJbACdAELMpyxq9IAAP7eHWGoc6/lJwMsTpzeeoJcDpcJ77+K0XYYp7avPgSDtCno5VnKdL/nFBIXjNdg3hNYbKF7oifXNEi3PV0R6/1l9eO9Trf7gWlsXOkfAAAA"
+      }
+    ],
+    "mariees": [
+      {
+        "id": "bibiharusi-01-mariee",
+        "src": "/images/galerie/bibiharusi-01-mariee.webp",
+        "width": 1350,
+        "height": 1800,
+        "orientation": "portrait",
+        "folder": "Mariées Notable",
+        "category": "Grand Mariage",
+        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoMABAAA8BgJbACdAD8Y98MG0AA/SGf4tqudCUhQ57rWq0iHjdcEBphDuZkVH0kuS3eKLz7sIvLGqPU+OyAedvfUP3P2DO8S3HhQUifJOhp5UmJgAA="
+      },
+      {
+        "id": "bibiharusi-02-mariee",
+        "src": "/images/galerie/bibiharusi-02-mariee.webp",
+        "width": 1201,
+        "height": 1800,
+        "orientation": "portrait",
+        "folder": "Mariées Notable",
+        "category": "Grand Mariage",
+        "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBACdASoMABIAPwFqrE8rJiQiMAgBYCAJbACdMoADgesvEaS8Wu8x/2sE+AD+bDEFNxFjFHzYmBKjHJ2z6kezQ0tEL6aTR4qYS43poR8khNcOLHDphbBwX6s0jinv+9jcnoOxzTDQ/cCmTU6uzvEmzL0wwAAA"
+      }
+    ],
+    "accessoires": [
+      {
+        "id": "accessoire-01",
+        "src": "/images/galerie/accessoire-01.webp",
+        "width": 1080,
+        "height": 607,
+        "orientation": "landscape",
+        "folder": "Accessoires",
+        "category": "Parures & patrimoine",
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoMAAcAA8BgJYgCw7DcEY3ygAD91Tvb/gEPiw5oaVHaX+57M+Ms+thiLTcWWT4Yt4dcfNsy62TIzaogAAA="
+      },
+      {
+        "id": "accessoire-02",
+        "src": "/images/galerie/accessoire-02.webp",
+        "width": 1080,
+        "height": 607,
+        "orientation": "landscape",
+        "folder": "Accessoires",
+        "category": "Parures & patrimoine",
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoMAAcAA8BgJZACdADyf8IAANzl2wXhVK5bMHhtKfP/x8WaBt611lQPYSbs8riHaGaDImYLwAA="
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "id": "image-galerie-hafidhu-1",
+      "src": "/images/galerie/image-galerie-hafidhu-1.webp",
+      "width": 607,
+      "height": 1080,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoMABYAPwFqrE6rJiQiMAgBYCAJZACdMoACwZXWZD7vIT+T4AD9q/THt8FeInVUR8gt/tCiTvZ8C7QdKxZoH/gvRH6TYgQ2jSq3uR4UvDKdn3lppvRG41t5jndOCZgAJe7i1x871GFy5/KkrPdTcdEQ1waNGccSfvEIl//dPJKeilxcYoCjVSIXZbbI6I64FAA="
+    },
+    {
+      "id": "image-hero-01-mtawo-wa-dhahabu-or",
+      "src": "/images/galerie/image-hero-01-mtawo-wa-dhahabu-or.webp",
+      "width": 1109,
+      "height": 1419,
+      "orientation": "portrait",
+      "folder": "Zone Hero",
+      "category": "Parures & patrimoine",
+      "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAQCdASoMAA8AA8BgJbACdAEfTW8qsMAA/DujLxypdzLX/T/j4Li2FoLg3rYWpNC6VPHPqATN0B2XpuYwMP0iLTvvRUvYUk9z40+fcOnDE8QvYttebXsae+v4s82RQAA="
+    },
+    {
+      "id": "mafunvu",
+      "src": "/images/galerie/mafunvu.webp",
+      "width": 1448,
+      "height": 1086,
+      "orientation": "landscape",
+      "folder": "Images clés",
+      "category": "Vie familiale",
+      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoMAAkAA8BgJaACdAYoBZmuHwAA/pRBfO+COBK1VPlz/FnNcQMlDsXTTN5cxec2iKb3pS33yCXB/hL6PD9NTgndQmtMhulfSwd6NdjaXH7+Lt6AAAA="
+    },
+    {
+      "id": "diaspora-comorien",
+      "src": "/images/galerie/diaspora-comorien.webp",
+      "width": 1448,
+      "height": 1086,
+      "orientation": "landscape",
+      "folder": "Images clés",
+      "category": "Vie familiale",
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoMAAkAA8BgJYgCdAD0r/JAf3gAAP51mBgYUf+uV52VqKI2327dP4HkEYkhHJpN/0UhDC9dYrqS07ccyattDEa0BSM9gdfZmgRQNAAA"
+    },
+    {
+      "id": "famille-comorienne",
+      "src": "/images/galerie/famille-comorienne.webp",
+      "width": 1448,
+      "height": 1086,
+      "orientation": "landscape",
+      "folder": "Images clés",
+      "category": "Vie familiale",
+      "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoMAAkAA8BgJZgCdADcnFC0f4AA/rIFq6RE+3Kyosl3EvZ/5HlN4CjaNRgM8NzyGT7xtHO7dlCroD4HsMQSN5HVKLKASF5r16wC3IN5egAAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-20",
+      "src": "/images/galerie/image-galerie-hafidhu-20.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwAgCdASoMABAAA8BgJZgCdH8AgoyfYtJIAAD+qyRMCf7Qn2H04c9k2mCKkcFDdv8AMg3JXgrBYThXFt+lsbbv1ngMlrwOmXU2Lx2Kxcdbiq7U17ioQF7G0BFxL5ngcsxyXmS9Aq4AAA=="
+    },
+    {
+      "id": "notable-01",
+      "src": "/images/galerie/notable-01.webp",
+      "width": 720,
+      "height": 960,
+      "orientation": "portrait",
+      "folder": "Notables Comoriens",
+      "category": "Notables",
+      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoMABAAA8BgJbACdADyhF40iOoAAP5IAsnp8Sz+I0LQ8eFu6piD0kj5+kIFdVmzvNztIbchDaLnSlNxlNLL2irtqq70U58Zb27L2OgDYuENO2tAAAA="
+    },
+    {
+      "id": "notable-02",
+      "src": "/images/galerie/notable-02.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Notables Comoriens",
+      "category": "Notables",
+      "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQAgCdASoMABAAA8BgJbACdAYrdZ/vPMD/3kAA9r9gj/zihqf0061El9wjMAK8g1lFMmcztBK4eVqedK0pztTDoznIaI+mUawYwH3Zh8jVTQrbgTZqtfgDJSbQ43t7XfKP7KEEy8N5GJFfCbsAAA=="
+    },
+    {
+      "id": "notable-03",
+      "src": "/images/galerie/notable-03.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Notables Comoriens",
+      "category": "Notables",
+      "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwAgCdASoMABAAA8BgJagCdAYr7awdjHIuYAD+herMpWahNzBW5vDIo3x53TOeu2m4virmvRS4NRH4iDk5r6ZJHzbHZkGvKQTnYEbf1oNW2OiL1AxgZ2D6cugYX+EMKVrfQ0QAAAA="
+    },
+    {
+      "id": "notable-04",
+      "src": "/images/galerie/notable-04.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Notables Comoriens",
+      "category": "Notables",
+      "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwAgCdASoMABAAA8BgJagCdAYuRyJHFx9AAAD+qht32GUaoXHPQkrpwCTdkgDAFPafTL1HxHS8+IR+/csWp9DJcu91sGfiuHbd7wdOt0S43n1h5cu/iWlVwawhAJQYL7Wt8YmGAWjgQnaAAAA="
+    },
+    {
+      "id": "notable-05",
+      "src": "/images/galerie/notable-05.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Notables Comoriens",
+      "category": "Notables",
+      "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoMABAAA8BgJbACdAYulwVtg9w2UAAA/IvivllQiDEJhnBrIMFyhg7NZHgl/RN9d8WWsmB4oeCN/ldvtDhrw1sphZ2b44ZHS1BsUw2Wkqc/5kRh5CPqt1WLloYAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-26",
+      "src": "/images/galerie/image-galerie-hafidhu-26.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQAgCdASoMABAAA8BgJbACdAEevrJrlzfW0QAA3LY4s6UrvD7jGGbvdZx1kfPuKpnhpqu/PSsAPSKEYGv1sbj0xvgMlNCJ73pp09yh2g8gixoZcyaquip8YGuW8LgLdd7sr6lb42LQAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-27",
+      "src": "/images/galerie/image-galerie-hafidhu-27.webp",
+      "width": 720,
+      "height": 960,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwAgCdASoMABAAA8BgJbACdAEfBPk1EvD98AD+lyjJTIzn0VBQgtBtTGHHuMjxw1Qk4ewe8cRP0EbNX6T9Yt4sUzSN+H6qjfM9OtStGxGhHiJcC6eXczhK8UpBdJvDG/3Lkm0b0eGFY4YaIAA="
+    },
+    {
+      "id": "accessoire-01",
+      "src": "/images/galerie/accessoire-01.webp",
+      "width": 1080,
+      "height": 607,
+      "orientation": "landscape",
+      "folder": "Accessoires",
+      "category": "Parures & patrimoine",
+      "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoMAAcAA8BgJYgCw7DcEY3ygAD91Tvb/gEPiw5oaVHaX+57M+Ms+thiLTcWWT4Yt4dcfNsy62TIzaogAAA="
+    },
+    {
+      "id": "accessoire-02",
+      "src": "/images/galerie/accessoire-02.webp",
+      "width": 1080,
+      "height": 607,
+      "orientation": "landscape",
+      "folder": "Accessoires",
+      "category": "Parures & patrimoine",
+      "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoMAAcAA8BgJZACdADyf8IAANzl2wXhVK5bMHhtKfP/x8WaBt611lQPYSbs8riHaGaDImYLwAA="
+    },
+    {
+      "id": "bibiharusi-01-mariee",
+      "src": "/images/galerie/bibiharusi-01-mariee.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Mariées Notable",
+      "category": "Grand Mariage",
+      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoMABAAA8BgJbACdAD8Y98MG0AA/SGf4tqudCUhQ57rWq0iHjdcEBphDuZkVH0kuS3eKLz7sIvLGqPU+OyAedvfUP3P2DO8S3HhQUifJOhp5UmJgAA="
+    },
+    {
+      "id": "bibiharusi-02-mariee",
+      "src": "/images/galerie/bibiharusi-02-mariee.webp",
+      "width": 1201,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Mariées Notable",
+      "category": "Grand Mariage",
+      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBACdASoMABIAPwFqrE8rJiQiMAgBYCAJbACdMoADgesvEaS8Wu8x/2sE+AD+bDEFNxFjFHzYmBKjHJ2z6kezQ0tEL6aTR4qYS43poR8khNcOLHDphbBwX6s0jinv+9jcnoOxzTDQ/cCmTU6uzvEmzL0wwAAA"
+    },
+    {
+      "id": "boinaharusi-01-mari",
+      "src": "/images/galerie/boinaharusi-01-mari.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Mari Notable",
+      "category": "Grand Mariage",
+      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoMABAAA8BgJagCdAEDfQaXn1IA9p10fI/F0t+B1C8FjYJ+Qm17zj4kvL9fu65mORGVAOHcdsu0II/WD3U//+bh2VBmnlYfyPB9chylYJR8YXgA"
+    },
+    {
+      "id": "boinaharusi-02-mari",
+      "src": "/images/galerie/boinaharusi-02-mari.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Mari Notable",
+      "category": "Grand Mariage",
+      "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQAgCdASoMABAAA8BgJbACdAELMpyxq9IAAP7eHWGoc6/lJwMsTpzeeoJcDpcJ77+K0XYYp7avPgSDtCno5VnKdL/nFBIXjNdg3hNYbKF7oifXNEi3PV0R6/1l9eO9Trf7gWlsXOkfAAAA"
+    },
+    {
+      "id": "ceremonie-01-madjilis",
+      "src": "/images/galerie/ceremonie-01-madjilis.webp",
+      "width": 1800,
+      "height": 1350,
+      "orientation": "landscape",
+      "folder": "Céremonies",
+      "category": "Cérémonies",
+      "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoMAAkAA8BgJQBOkCYidZz1uAQAAPqeG2PB6zKzHP00tuuRLAa0/9fv1mMABeyGJ8PHwXjsLCEsvq3KWGaO0luGKK7t9AJNYO4xHXhfmmZcjYgGnnChbAdAAAA="
+    },
+    {
+      "id": "ceremonie-02-madjilis",
+      "src": "/images/galerie/ceremonie-02-madjilis.webp",
+      "width": 1800,
+      "height": 1350,
+      "orientation": "landscape",
+      "folder": "Céremonies",
+      "category": "Cérémonies",
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoMAAkAA8BgJbACdAEWP8UfwRmOAAD45B55liniu8pkAcA5AFerFQYrUUpKiJvD5wdkw/Z0acyJ6a/2xvknhvfTxJQlNpgr0SgOAAAA"
+    },
+    {
+      "id": "ceremonie-03-madjilis",
+      "src": "/images/galerie/ceremonie-03-madjilis.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Céremonies",
+      "category": "Cérémonies",
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoMABAAA8BgJaACdADJ+BpyG1tBUAD3LK72ojOvhJ4FRx3XZG98zQCNqbLsarx4nqxzuJwAKMx7dM467BDJWhv0q+OtI7ukWaP9pBj4v5wUFE5T9YAAAA=="
+    },
+    {
+      "id": "ceremonie-04-madjilis",
+      "src": "/images/galerie/ceremonie-04-madjilis.webp",
+      "width": 1800,
+      "height": 1350,
+      "orientation": "landscape",
+      "folder": "Céremonies",
+      "category": "Cérémonies",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoMAAkAA8BgJYwAAsaLlkFeAAD+7PGuU5eNioQqf0jV30wU5OUpzcu1fE9azldY3e0gRd80HpHj74PL2BQTREAvqxCJhwAA"
+    },
+    {
+      "id": "ceremonie-05-madjilis",
+      "src": "/images/galerie/ceremonie-05-madjilis.webp",
+      "width": 1800,
+      "height": 1350,
+      "orientation": "landscape",
+      "folder": "Céremonies",
+      "category": "Cérémonies",
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoMAAkAA8BgJQBOgCPV25vuUSAA+Fst0ncDlysMsGWw5JvOAKWsBTS4PcT3B/xOLJY3Hev9zPENy9aQWjF+/dlg63ixTzBdzDZL0TGcAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-39",
+      "src": "/images/galerie/image-galerie-hafidhu-39.webp",
+      "width": 1318,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoMABAAA8BgJZQCdAD6mkZVpiZLsAD+50AaZrN8i4tasF3gHqzw8BYxtBIj3dBKQ78R6Zu8/Ba6gQLQdLynpa1GvWTdY1kSh+OmfH20fddIey66QEIAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-40",
+      "src": "/images/galerie/image-galerie-hafidhu-40.webp",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoMABIAPwFqrE8rJiQiMAgBYCAJZwAAW+R+ZyyMHFCi4mAA/tMchrs9gM6gLmPeAHKNgi2pNHrgvRYl47PFMdXeXS4BLJrfwtMErE3ecaFcqswwUp3iABHGq+3kusrAAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-41",
+      "src": "/images/galerie/image-galerie-hafidhu-41.webp",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoMABIAPwFqrE6rJiQiMAgBYCAJZQCw7Btnw5CllrkZ90kAAP5SW5SfGPDUDZ1tA56/6Tu/bUeBzVbsA1OXnr+kyX0YUN0491VcaORXvJGAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-42",
+      "src": "/images/galerie/image-galerie-hafidhu-42.webp",
+      "width": 1082,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAwCdASoMABQAPwFqrE6rJiQiMAgBYCAJZwAAQyOlJHU17sg2pWAA/IK7gHT+joqoAnfnn6LeAEk4tx0aYSFe3V62TX9YNBKCOU8ldSAlS9aSWdvJJlMJB/4AAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-43",
+      "src": "/images/galerie/image-galerie-hafidhu-43.webp",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoMABIAPwForE6rJaQiMAgBYCAJZwAAW7u1CHiQdvvJIdTAAP7DkeXfRO8ow7kitVvnLSTsQmQ6C5UitH7v9fWTF57xyqzQGW5fl28GA7BvzvpI69GBw3e3jZy1IjtaOPNrTmGk6P2ZCib424AAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-44",
+      "src": "/images/galerie/image-galerie-hafidhu-44.webp",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoMAAgAA8BgJagCdAYs3axnYkIAAM4y1V3uiWo/ZnSmQ22xFY2jbY9TPuX7iPYo/xOEQjlSgiqSQ8Ja/1bqn06imah5evfXnGpegnAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-45",
+      "src": "/images/galerie/image-galerie-hafidhu-45.webp",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAwCdASoMABIAPwFqrE8rJaQiMAgBYCAJQBOgBF+rQ9TThh1uXKgA/lXjlcLjRp6GWh0FVtrUIcOr4hjGHwWS8YdIsjCxAzgNnBDlwpmgGhh2gc3qQnnDsTqOx9nlPmW2lwVb4pIUxDEQXjgAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-46",
+      "src": "/images/galerie/image-galerie-hafidhu-46.webp",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwBACdASoMABIAPwFqrE8rJiQiMAgBYCAJZwC/U1/AWoSLPygscqwlsbgA+FhLD+p2GUnfSnHS7wasRHny6H7PXsqort+vkr9Ks1+5ZfPTYnOrJk3ly6qn3BRXZi6Q67Vo97NADxTSV+7zkgrs+wMiJ180YSHAAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-47",
+      "src": "/images/galerie/image-galerie-hafidhu-47.webp",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQAwCdASoMABIAPwFqrE6rJiQiMAgBYCAJYwAASB9+Z2VpmHvAAP7e6QCSbvE3k/vhm2Fyds9af33hoPrN4zc2GT8SFXPQ5xM9KGjOGPfMos+MAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-48",
+      "src": "/images/galerie/image-galerie-hafidhu-48.webp",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoMABIAPwForE6rJaQiMAgBYCAJYgCdAywBk4TtqDM+1bbfUAD+51EwdRu0zypsTVF8cpujknOPt1hwJ36+Di77NFjgQJqcx8dDagh73gp7J2wczylbSrfJGqbCn5Fo/HKVwn8DfKKjyZPV4HDAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-49",
+      "src": "/images/galerie/image-galerie-hafidhu-49.webp",
+      "width": 1600,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoMAA4AA8BgJbACdAYxFkyRV8sBZgAA/Y6Jd2o7s5+0znNSdodtq3rAviy+Kc4Tg6QfZ2tIwvOyjZfNq3kYk0MFnUJBDghK2+zcNaXUcbSEV2/WRrxcktL4ys/i/pK3olkCG4hCXsXUwEygAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-50",
+      "src": "/images/galerie/image-galerie-hafidhu-50.webp",
+      "width": 1800,
+      "height": 1139,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoMAAgAA8BgJagCdADRK+iewAD+R/NouHfXmnTcMk6HlFm9111k3BwJ5YZUwCJWTgMD1Qk+AnM6mMo6SsdABcENxT/wYdK4Dqp7g+ECSL/USwAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-51",
+      "src": "/images/galerie/image-galerie-hafidhu-51.webp",
+      "width": 960,
+      "height": 606,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoMAAgAA8BgJZgCdADbmBcjSAD7ISMncUYpM8SjYDEUta3nSTB01ZWgvcV9dqumOz6GBt0Vl+H33ci2+NoNAfA4jXyLMYeQvPoAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-52",
+      "src": "/images/galerie/image-galerie-hafidhu-52.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoMABAAA8BgJbACdADObDq9rwAA/geGDnPD9JOklEOjQW6P7Bjg6Rm1ryHIqx8RbSgwCJuBFratzClgcLAzQIXOStHHIA3tFSXOV28fDNbjN/XCSAAAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-53",
+      "src": "/images/galerie/image-galerie-hafidhu-53.webp",
+      "width": 1800,
+      "height": 1350,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAQCdASoMAAkAA8BgJaACdADZTg8cAP7U+l1kh5ghlmt65jCZoqNV6vZvQEa3PNYwrNkY8tD9Ej9/9JXDqVq01VTKCawW8ZhggiZnLjDyu7sAAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-54",
+      "src": "/images/galerie/image-galerie-hafidhu-54.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQAgCdASoMABAAA8BgJbACdAYvhbSJT3eUWAAA+o9qw8YrV2Mx7eITOQn/WFCQIqe8Rg+I3wF9zoQZGzcoKrQCPkS3buB41VksRM/SPR5zRkeJ42D5ldBzLfjHavP+N/vze4k/vrFO33sTt7lP9Qf7iGgAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-55",
+      "src": "/images/galerie/image-galerie-hafidhu-55.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQAgCdASoMABAAA8BgJbACdH8AGXzwGyVBYxAA9iPOJLclT5BLQwoqkNMxK9UJ7LypxZfrJaT0Mpk0Ay41OWkK4ZCXX8WhEHu+txNge52aB1sK/KY08j0PEZlooxcoIRqKGN0B0n5lGAAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-56",
+      "src": "/images/galerie/image-galerie-hafidhu-56.webp",
+      "width": 1800,
+      "height": 1215,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoMAAgAA8BgJbACdAD0jvqGbYAAyyGL5+fOo/+r5NgmDph1rlnPW0D8BzFxvzqqO+hfHkR1TtcB7kdTDn+oN/XAAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-57",
+      "src": "/images/galerie/image-galerie-hafidhu-57.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABQAgCdASoMABAAA8BgJaACdAEWWePfMiRT0gAA+yM13dq7eWwdhn50YKt1NcvfQc2WZ6paSXFY+hUlPgrOrq5gQFFaE3YMF3gURqtt+4HENEJVyG7t86eFnU1Fy1DUu17tYjNghFudU4go2AA="
+    },
+    {
+      "id": "image-galerie-hafidhu-58",
+      "src": "/images/galerie/image-galerie-hafidhu-58.webp",
+      "width": 720,
+      "height": 960,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQAgCdASoMABAAA8BgJbACdAEXxhslUmdIAP7Tw6d5B6cIhRDAhbLGAx5oGI5POquPBUC1OA3K8j0rLVFxT22xRnYEGsjmRDtYW9Doe2VA73cZoVWSpYX9PVLfP6eC2wJaZmLAXySQVF7pN7QuHdcCQMf4AA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-59",
+      "src": "/images/galerie/image-galerie-hafidhu-59.webp",
+      "width": 1800,
+      "height": 1123,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoMAAcAA8BgJbACdAEekOPkrAAA/XUJu7uFG502CqfnLkgGlnUVVqGknOD08mzZwQsZpQyKltwmRjr6cTX9CqqsOdgIJCc0ASfezK4AAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-60",
+      "src": "/images/galerie/image-galerie-hafidhu-60.webp",
+      "width": 1719,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAQCdASoMAA0AA8BgJbACdADZmHC4APa/UpCkwx50PDXN9p4Pq25LcFFdMtr7xqsFAaE00YzjXeMihvHQYYT0l4x+zb/b21t8rKrneAhm0BXFzoPoYyf+85+uAOkAgAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-61",
+      "src": "/images/galerie/image-galerie-hafidhu-61.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACwAQCdASoMABAAA8BgJbACdAEercpgAP5miEAbfSn6mGNz00PV/XM4MDxC+QSAIQSi7xrTaWz5kJPdfgxr++Uxph/ux1Cw3F2eTR8pTMe2PAQjPX2ZJxRGMvlZ8nZ7HN5dVgj9ntVLuHOwW0RJ7QAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-62",
+      "src": "/images/galerie/image-galerie-hafidhu-62.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwAgCdASoMABAAA8BgJbACdH8AFlmPpk58UADOPueQAjNbBYAYhtM6RUgRmY3N02f3uhorfUTmfPxbo2BamYA7c4++4GuFtmI3fXfu8vEr7cIsLgVTODn2jn4GyLUQkI1AgdsUhnVGF895T1YpSwAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-63",
+      "src": "/images/galerie/image-galerie-hafidhu-63.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQAgCdASoMABAAA8BgJbACdAYwTo7r72bpzAAA/rckiP5SE2/4I9lZ8lKC1O3be/Dm9unnCXIsj+TI7WQQ1FHyjwtTFfqBCeUJGKHjUHe1Fq7Nfs+u3lhnIc3tCkUjqPqxPUZfsYIPFtxH94ynPjrad16ebZVFEAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-64",
+      "src": "/images/galerie/image-galerie-hafidhu-64.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQAgCdASoMABAAA8BgJbACdAD7j0iFTxq11gAA/mbUciuVTxMc2Fc1439R96hCJl13iHcwLtU2LSPwcom6RhoKx0xikq7rf5kTJY0KDJneVctS2QhBI1XFgBww2b6DVxu5iR+7gNYzu0Uapc2m1RC398s1wTwAAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-65",
+      "src": "/images/galerie/image-galerie-hafidhu-65.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwAgCdASoMABAAA8BgJbACdDBOyIzJztH4QezIAP7VuVUqfB6AjGajBeaytMgsGDuYqW1irg/TB/0oXDPfNDI+SeyUeTUDlKWVsiktW7AMmIOMXOHhizB+iIts9Ni9dcu93ViuWgCor58lAcBeq9hpkb/DOBejoKKyc7oj8AA="
+    },
+    {
+      "id": "image-galerie-hafidhu-66",
+      "src": "/images/galerie/image-galerie-hafidhu-66.webp",
+      "width": 1800,
+      "height": 1285,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoMAAkAA8BgJbACdADbo7eFwAD8tKJnJZvaNzfghGWqK1yhf8yonp+5nL/qCb3q7M/10rSx+/K54uLeXlbkqqCTLSZd4KbEYr/3ViE3gAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-67",
+      "src": "/images/galerie/image-galerie-hafidhu-67.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQAgCdASoMABAAA8BgJbACdAYuv2t1MLZyQIAA/uiSEu6hpL4tvsHNxcaqoe8OwGTua/lXFA1DPoOM1N6XIcclCfXfF8DWpb82tknaJEvYSux9Ytf0yxhICgUcY0gRIO4WChAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-68",
+      "src": "/images/galerie/image-galerie-hafidhu-68.webp",
+      "width": 1800,
+      "height": 1350,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAQCdASoMAAkAA8BgJQBOgA6T3AD5WJHjms++zGgSU/zeRhHZ06mDESVmp2lfdJWWVFy/QELE5/3KNX88nuu55K4AAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-69",
+      "src": "/images/galerie/image-galerie-hafidhu-69.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQAgCdASoMABAAA8BgJZgCdADcW4ZlYV0AAPtjAaSeA/GxNoWTmVap/tMLIBlmUJs6flvJ4UPCxm2OLJQa7901D/9iZY/KbYneCI50Z3j7RrWkjeZAb0PEMSO8FsjORKbWyq/MMAAAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-70",
+      "src": "/images/galerie/image-galerie-hafidhu-70.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoMABAAA8BgJagCdAELW39aBeqMAPdJCYigESAaBLpzIXdvIv++vOZVM9OFsrS8cVKSuSouQiVV21BSa6jBOopT5H2iW9ky4shcUXEbT+BROWGUyGAAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-71",
+      "src": "/images/galerie/image-galerie-hafidhu-71.webp",
+      "width": 1800,
+      "height": 1350,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoMAAkAA8BgJZQAAqsOIYVQAP6rSG7Mx3Mr1GfdXHOnBnIsX8ick1m+XMLs7JKgpvqHINMOtjlhk4TdrFPTU+pi0AAAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-72",
+      "src": "/images/galerie/image-galerie-hafidhu-72.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQAgCdASoMABAAA8BgJZACdAYt9WeisaPKPAAA+5rg9o4UTqWmFCNg1L+RxJv8aMigA5rL6uunKMD6zAs56uUyK0gKCNwf7ALIKQNyeHdkAAAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-73",
+      "src": "/images/galerie/image-galerie-hafidhu-73.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAQCdASoMABAAA8BgJYgCdADhA92rfeAA/CBAx/4jAypAEcF7iamtdLqc1KWeCJvEYi5u8KA4KTcQ6sF9nQFFAk7RZ4u2GAy93Zi7v0NtiDWMgiRS+Ax0vst54m3bo/+JP8AA"
+    },
+    {
+      "id": "image-galerie-hafidhu-74",
+      "src": "/images/galerie/image-galerie-hafidhu-74.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAwAgCdASoMABAAA8BgJbACw7EfvyIBNhITAADiYw5OIx0nowy5F77zfpNLNqncUoduYW2HxYmhtK1Bg72cHgVbs5gy0brpLx9niw2gqIOarP2jejg0imLCaGO+vdVmg3Ha6YoF6fa5cQPCpwAAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-75",
+      "src": "/images/galerie/image-galerie-hafidhu-75.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAQCdASoMABAAA8BgJZACdADbHMcqIoAA/WmLNjMdlGt2g4nVgmSa+W1poONEnEdydsUbv6nWaQQAlGwpXU+NbaQ2rn0awJpcwuN1qhmSNyKMPAhpvkEAJO6BIznfdDwAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-76",
+      "src": "/images/galerie/image-galerie-hafidhu-76.webp",
+      "width": 1791,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoMAAwAA8BgJZACdADaNHTIAAD+QGF2sjx2za6MvwSUyhsALuQT5tbEV677qYdWj3RWoqM++iLqVCgSvyudu1/0JG44aagTV7bQJlaWIqC+voEILkAAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-77",
+      "src": "/images/galerie/image-galerie-hafidhu-77.webp",
+      "width": 1800,
+      "height": 1350,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoMAAkAA8BgJYgCdAEe2NUjPusAAP3r13cdHh7YktLiJxNjwiOvFrkYxQIzhC/wv5MQmuZZA13RCfmuTvbpgWPCxVvQVuLn3UDENmt8coAAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-78",
+      "src": "/images/galerie/image-galerie-hafidhu-78.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwAgCdASoMABAAA8BgJagCdAYwxdDI1gSoAAD8tOMIRvNpgOOmALce5+QfwisCk8/GSqqFWVnFqDoQOnf024PL0cmC7Pj+n2NzArhRQWS0wUc2sd3f2anwDZmtYlSuHHE1bQrT6S4lCAAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-79",
+      "src": "/images/galerie/image-galerie-hafidhu-79.webp",
+      "width": 720,
+      "height": 960,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAQCdASoMABAAA8BgJbACdACUWTivAAD9uUg6R6xPA21W0ERXxq4jXy28+7avViqVCu8I9/KPFpfkCvuF5bx4jt6BHzYDi0Pva/QxEEG6p7ZtjV0ODrJoyWi03g6H4DiAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-80",
+      "src": "/images/galerie/image-galerie-hafidhu-80.webp",
+      "width": 1201,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABwAwCdASoMABIAPwFqrE8rJaQiMAgBYCAJbACdABq5d8BnToAA+oznedJjEJgr0R4Jw+O2XdyVW3v7wXQcMn1xOLV5vBIzwC43iCgXVSXhe9kKIFL6wA7zFtsGe34vKkWW4go+y6RpwPQ1y7Kg+fXoQSYFL4CAAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-81",
+      "src": "/images/galerie/image-galerie-hafidhu-81.webp",
+      "width": 1201,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoMABIAPwForE6rJiQiMAgBYCAJbAC7LwG4ACB9iUF8efBPPIAA/uc3s2rFLKHCoiHqn3JRBN2MimrolLL7IcGtsN8MziwvIkRcCFfxIsYrXu4hKBR/b9pXGOnxBSay39UL+flos+W+3iRI8BaryAAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-82",
+      "src": "/images/galerie/image-galerie-hafidhu-82.webp",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAACwAwCdASoMABIAPwFqrU8rJiQiMAgBYCAJYwCw7BwjsCywarbEAAD+7p1wSI0vsm+umxWZfTjHApHFqx1yvo0H2BFYacav8mMGbzWT9F9GUHQRx7/pPpiemdSSCJDYgPhIdBlrMgfOAAAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-83",
+      "src": "/images/galerie/image-galerie-hafidhu-83.webp",
+      "width": 1201,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAwBACdASoMABIAPwFqrE8rJiQiMAgBYCAJbACdL1ABrDAEdyKikdr5UvAA/sOmubbVZYKnSafQvOYMBS9NlPT7aQKiCQYvri3ulckKVwywhHFQIhvsNjAK6Y3yDDw66xEvmLlYOxcmFawJ7x4AAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-84",
+      "src": "/images/galerie/image-galerie-hafidhu-84.webp",
+      "width": 1201,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoMABIAPwFqrE8rJiQiMAgBYCAJbACdMoACi9t7xbSEFbfgwAD+6ogsU0vVH/VYMXYLsgW7fBI4SHJSsSzEkAa4Yfh0F1KE9W+EqBzLkin84BkwXbaWJjzSRdiXhhdGZiM3LZhUCyN8UgQjNFeUL3ONf97IAAAA"
+    },
+    {
+      "id": "image-galerie-hafidhu-85",
+      "src": "/images/galerie/image-galerie-hafidhu-85.webp",
+      "width": 1201,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQAwCdASoMABIAPwFqrE8rJiQiMAgBYCAJbACdL1ABerpPWdYMRKQA/pSb933HooCMmQ81lWw8NGIxfIX6SA7lZckCCPqa388y7PfaMBB5r2Au9KPtDxRzMV5JcNVA+Lrl7BPoakhGV2SuvuQzX3FMAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-86",
+      "src": "/images/galerie/image-galerie-hafidhu-86.webp",
+      "width": 607,
+      "height": 1080,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBACdASoMABYAPwFqrE6rJiQiMAgBYCAJQBdkBshQasto9clBdcKZ8AAA+MKVA39W4m11+1vdy91ZEB6LrPXkM/GiSed7AXRYV52Y7iM+OnlOR/N3rJ9xOprWE/tLpMWSenDyv54k6wbqqqx8aXhOL/7uDzguHXVn4+cQDigN36nvZs4jmwyEAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-87",
+      "src": "/images/galerie/image-galerie-hafidhu-87.webp",
+      "width": 607,
+      "height": 1080,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBACdASoMABYAPwForE6rJiQiMAgBYCAJbACdIExCUHqOSXnNcIS8gAD+vb0I9M17am4dJLwgbJQjwJ03+kmWozo5r87banBqb/DF3ROWo66x4nOb3H6xEREEShRnKsTHprCNCELXj/MitW22TLTZf6NZberxaIt2vNCqqRet+s6CTzjLN1vkFdM4ScCEXxQcGMGRAkAAAA=="
+    },
+    {
+      "id": "image-hero-02-couple-de-notable",
+      "src": "/images/galerie/image-hero-02-couple-de-notable.webp",
+      "width": 1271,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": "Zone Hero",
+      "category": "Parures & patrimoine",
+      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoMABEAPwForE6rJaQiMAgBYCAJbACdAdwAkwepoHe3gNmIAPr/co4oXQa2H9fKg2nT3pLLDmQn8TCxVeQpftggseF7bHwAQOUmURZjW9XGupj1tr/J+PX7yjn9Ts/lcicDy3HBMnnupGZv7LRBdL0AAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-89",
+      "src": "/images/galerie/image-galerie-hafidhu-89.webp",
+      "width": 1350,
+      "height": 1800,
+      "orientation": "portrait",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABwAgCdASoMABAAA8BgJbACdAYu5bWMum0T34AAAP7wpIsDpV/MyrGdiu3kiy35fGiGlVwYfP9XP39lNeGODJTSEivB6Z2XpTZuBs6vCi4DrYP5dZ0SJg4YG2GFrl24oUFXPsE2dtWOZM1mDSZe+KQAAAA="
+    },
+    {
+      "id": "image-galerie-hafidhu-90",
+      "src": "/images/galerie/image-galerie-hafidhu-90.webp",
+      "width": 1800,
+      "height": 1419,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoMAAkAA8BgJaACdADcgU9FQ0AA/aah/stD+IkH+nxvs5CuM+jYNfd1Udu1qobsWhoPkzyyTP4kUHZXFNg4PHSGdcEAAA=="
+    },
+    {
+      "id": "image-galerie-hafidhu-91",
+      "src": "/images/galerie/image-galerie-hafidhu-91.webp",
+      "width": 1800,
+      "height": 1617,
+      "orientation": "landscape",
+      "folder": null,
+      "category": null,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoMAAsAA8BgJZACdAECoiARtgAA8RmGLaqRUSgTPkhV3iAHpuDrmpnqCZ0kaWDE2SzRpngR2hfWes8iPfuVayon7CYwMdBS5DP9Tw9rwLMpqN2+SJwAAA=="
+    }
+  ]
+}
