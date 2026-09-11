@@ -66,7 +66,7 @@ export default function GalleryPage() {
         </Container>
       </Section>
 
-      <Section spacing="loose">
+      <Section spacing="loose" className="pt-8! sm:pt-10!">
         <Container>
           <h2 className="sr-only">Photographies</h2>
           <Gallery items={items} />

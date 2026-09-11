@@ -42,12 +42,19 @@ const THEME_FOLDERS = [
 const GALLERY_FOLDER = 'Page Galerie';
 const LOGO_FOLDER = 'Logos & Favicon';
 
-/** Catégories publiques, dérivées des noms de dossiers réels. */
+/**
+ * Catégories publiques, dérivées des noms de dossiers réels.
+ *
+ * « Madjilis » reprend le terme figurant dans les noms de fichiers
+ * d'origine (« Céremonie 01_Madjilis.jpg »). Il est préféré à
+ * « Cérémonies », trop proche de la catégorie générale et source de
+ * confusion dans les filtres.
+ */
 const CATEGORY_LABELS = {
   'Zone Hero': 'Parures & patrimoine',
   'Images clés': 'Vie familiale',
   Accessoires: 'Parures & patrimoine',
-  'Céremonies': 'Cérémonies',
+  'Céremonies': 'Madjilis',
   'Mari Notable': 'Grand Mariage',
   'Mariées Notable': 'Grand Mariage',
   'Notables Comoriens': 'Notables',

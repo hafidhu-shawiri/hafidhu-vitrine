@@ -72,10 +72,14 @@ export type ContactStatus = (typeof CONTACT_STATUSES)[number];
 
 /**
  * Champ leurre. Un robot remplit tous les champs qu'il trouve ;
- * un visiteur ne le voit jamais. S'il est rempli, la soumission est
- * écartée silencieusement.
+ * un visiteur ne le voit jamais.
+ *
+ * Le schéma l'accepte volontairement rempli : le rejet est traité APRÈS
+ * validation, par un succès silencieux côté route. Le refuser ici
+ * renverrait une erreur de validation — ce qui apprendrait au robot que
+ * le champ est piégé, et risquerait d'afficher un message technique.
  */
-const honeypot = z.string().max(0).optional().or(z.literal(''));
+const honeypot = z.string().max(200).optional().or(z.literal(''));
 
 export const contactSchema = z.object({
   firstName: name,

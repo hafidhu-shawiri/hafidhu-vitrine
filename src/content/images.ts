@@ -103,7 +103,7 @@ export const themeImages = {
 
 /** Libellé neutre pour les images thématiques — jamais de nom de personne. */
 export const themeAlt: Record<string, string> = {
-  'Céremonies': 'Assemblée réunie lors d’une cérémonie comorienne (madjilis).',
+  'Céremonies': 'Assemblée réunie lors d’un madjilis, cérémonie comorienne.',
   'Notables Comoriens': 'Portrait d’un notable en tenue de cérémonie comorienne.',
   'Mari Notable': 'Marié en tenue de cérémonie du Grand Mariage comorien.',
   'Mariées Notable': 'Mariée en tenue et parures de cérémonie du Grand Mariage comorien.',

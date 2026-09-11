@@ -104,7 +104,7 @@ export default async function ModulePage({ params }: { params: Promise<{ slug: s
             trail={[{ name: 'Solutions', path: routes.solutions }, { name: mod.name }]}
           />
 
-          <div className="mt-6 grid gap-10 lg:grid-cols-[1fr_0.92fr] lg:gap-14">
+          <div className="mt-6 grid gap-10 lg:grid-cols-[1fr_0.92fr] lg:items-center lg:gap-14">
             <div>
               <p>
                 <span className="inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-teal">
@@ -142,7 +142,9 @@ export default async function ModulePage({ params }: { params: Promise<{ slug: s
                       blurDataURL={visuals.hero.blurDataURL}
                       priority
                       sizes="(max-width: 1023px) 100vw, 44vw"
-                      className="h-auto w-full"
+                      // Image portrait : plafonnée sur grand écran pour ne pas
+                      // déséquilibrer le hero, cadrage centré sur le sujet.
+                      className="h-auto w-full object-cover object-[center_30%] sm:max-h-[440px] lg:max-h-[480px]"
                     />
                   </div>
                   {visuals.heroCaption ? (

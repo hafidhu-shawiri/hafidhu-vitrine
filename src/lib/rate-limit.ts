@@ -17,7 +17,14 @@ type Entry = { count: number; resetAt: number };
 
 const buckets = new Map<string, Entry>();
 const WINDOW_MS = 10 * 60 * 1000; // 10 minutes
-const MAX_REQUESTS = 5;
+
+/**
+ * Le compteur s'incrémente avant la validation : une personne qui corrige
+ * plusieurs fautes de saisie consomme donc des tentatives. Le plafond est
+ * fixé assez haut pour ne jamais gêner un usage normal, tout en restant
+ * bas pour un envoi automatisé.
+ */
+const MAX_REQUESTS = 12;
 
 /** Purge opportuniste pour éviter que la table ne grossisse indéfiniment. */
 function sweep(now: number) {
