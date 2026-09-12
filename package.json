@@ -10,6 +10,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "assets": "node scripts/prepare-assets.mjs",
+    "assets:og": "node scripts/make-og-image.mjs",
     "check:terms": "node scripts/check-forbidden-terms.mjs",
     "check:secrets": "node scripts/check-client-secrets.mjs",
     "verify": "npm run typecheck && npm run check:terms && npm run check:secrets",

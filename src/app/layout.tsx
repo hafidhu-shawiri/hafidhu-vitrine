@@ -14,6 +14,23 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+/**
+ * Vignette de partage social, commune à toutes les pages.
+ *
+ * Le chemin est relatif : `metadataBase` le rend absolu, si bien que la
+ * vignette suit automatiquement le domaine configuré — URL Vercel
+ * aujourd'hui, hafidhu.com demain, sans modification du code.
+ *
+ * Régénération : `npm run assets:og`.
+ */
+const OG_IMAGE = {
+  url: '/brand/og-image.jpg',
+  width: 1200,
+  height: 630,
+  alt: 'HAFIDHU — Le Gardien des traces qui comptent.',
+  type: 'image/jpeg',
+} as const;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -44,11 +61,13 @@ export const metadata: Metadata = {
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
     url: SITE_URL,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
+    images: [OG_IMAGE.url],
   },
 };
 
