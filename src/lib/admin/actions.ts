@@ -20,19 +20,38 @@ export type ActionResult = { ok: boolean; message: string };
    AUTHENTIFICATION
    ═══════════════════════════════════════════════════════════════════ */
 
+/**
+ * Supabase Auth identifie par adresse. Le compte administrateur a été
+ * créé par scripts/create-admin.mjs, qui dérive l'adresse du nom
+ * d'utilisateur lorsque celui-ci n'en est pas une.
+ *
+ * La même dérivation doit être appliquée ici, sans quoi saisir
+ * « rachade » enverrait « rachade » à Supabase, qui attend
+ * « rachade@hafidhu.local » — et refuserait la connexion.
+ *
+ * Une adresse complète reste acceptée telle quelle.
+ */
+function toAuthEmail(identifier: string): string {
+  const value = identifier.trim().toLowerCase();
+  return value.includes('@') ? value : `${value}@hafidhu.local`;
+}
+
 export async function signIn(
   _prev: ActionResult | null,
   formData: FormData
 ): Promise<ActionResult> {
-  const email = String(formData.get('email') ?? '').trim();
+  const identifier = String(formData.get('email') ?? '').trim();
   const password = String(formData.get('password') ?? '');
 
-  if (!email || !password) {
+  if (!identifier || !password) {
     return { ok: false, message: 'Identifiant et mot de passe sont nécessaires.' };
   }
 
   const supabase = await createSessionClient();
-  const { error } = await supabase.auth.signInWithPassword({ email, password });
+  const { error } = await supabase.auth.signInWithPassword({
+    email: toAuthEmail(identifier),
+    password,
+  });
 
   if (error) {
     // Message volontairement identique dans tous les cas d'échec : il ne

@@ -45,10 +45,17 @@ export function LoginForm({ configError }: { configError?: boolean }) {
         <label htmlFor="admin-email" className="mb-2 block text-[0.875rem] font-semibold text-ink">
           Identifiant
         </label>
+        {/*
+          « text » et non « email » : l'identifiant administrateur est un
+          nom d'utilisateur (« rachade »), pas une adresse. Avec
+          type="email", le navigateur refusait la saisie avant même
+          l'envoi — « Veuillez inclure "@" ». Une adresse complète reste
+          acceptée : le serveur traite les deux formes.
+        */}
         <input
           id="admin-email"
           name="email"
-          type="email"
+          type="text"
           required
           autoComplete="username"
           disabled={pending}
