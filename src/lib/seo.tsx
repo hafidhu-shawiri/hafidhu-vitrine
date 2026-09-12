@@ -7,13 +7,17 @@
  */
 
 import type { Metadata } from 'next';
-import { absoluteUrl, SHOULD_INDEX, site, SITE_URL } from './site';
+import { absoluteUrl, ogImage, SHOULD_INDEX, site, SITE_URL } from './site';
 
 type PageMetaInput = {
   title: string;
   description: string;
   path: string;
-  /** Image de partage propre à la page (chemin relatif). */
+  /**
+   * Image de partage propre à la page (chemin relatif).
+   * À défaut, la vignette commune du site est utilisée : une page sans
+   * vignette afficherait une carte sociale vide.
+   */
   image?: string;
   /** Certaines pages ne doivent pas être indexées (administration). */
   noIndex?: boolean;
@@ -43,13 +47,13 @@ export function pageMetadata({
       title,
       description,
       url,
-      ...(image ? { images: [{ url: absoluteUrl(image) }] } : {}),
+      images: [image ? { url: absoluteUrl(image) } : ogImage],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      ...(image ? { images: [absoluteUrl(image)] } : {}),
+      images: [image ? absoluteUrl(image) : ogImage.url],
     },
   };
 }

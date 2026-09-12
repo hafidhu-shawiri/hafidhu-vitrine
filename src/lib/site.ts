@@ -45,6 +45,23 @@ export const site = {
   url: SITE_URL,
 } as const;
 
+/**
+ * Vignette de partage social commune à toutes les pages.
+ *
+ * Le chemin reste relatif : `metadataBase` le rend absolu, si bien que la
+ * vignette suit automatiquement le domaine configuré — URL Vercel
+ * aujourd'hui, hafidhu.com demain, sans modification du code.
+ *
+ * Régénération : `npm run assets:og`.
+ */
+export const ogImage = {
+  url: '/brand/og-image.jpg',
+  width: 1200,
+  height: 630,
+  alt: `${site.name} — ${site.tagline}`,
+  type: 'image/jpeg',
+} as const;
+
 export function absoluteUrl(pathname = '/'): string {
   return `${SITE_URL}${pathname.startsWith('/') ? pathname : `/${pathname}`}`;
 }

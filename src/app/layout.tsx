@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { JsonLd, organizationJsonLd, webSiteJsonLd } from '@/lib/seo';
-import { SHOULD_INDEX, site, SITE_URL } from '@/lib/site';
+import { ogImage, SHOULD_INDEX, site, SITE_URL } from '@/lib/site';
 
 /**
  * Inter est auto-hébergée par next/font : aucune requête vers un domaine
@@ -13,23 +13,6 @@ const inter = Inter({
   display: 'swap',
   variable: '--font-inter',
 });
-
-/**
- * Vignette de partage social, commune à toutes les pages.
- *
- * Le chemin est relatif : `metadataBase` le rend absolu, si bien que la
- * vignette suit automatiquement le domaine configuré — URL Vercel
- * aujourd'hui, hafidhu.com demain, sans modification du code.
- *
- * Régénération : `npm run assets:og`.
- */
-const OG_IMAGE = {
-  url: '/brand/og-image.jpg',
-  width: 1200,
-  height: 630,
-  alt: 'HAFIDHU — Le Gardien des traces qui comptent.',
-  type: 'image/jpeg',
-} as const;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -61,13 +44,13 @@ export const metadata: Metadata = {
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
     url: SITE_URL,
-    images: [OG_IMAGE],
+    images: [ogImage],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
-    images: [OG_IMAGE.url],
+    images: [ogImage.url],
   },
 };
 
