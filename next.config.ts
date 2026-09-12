@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import { modules } from './src/content/modules';
 
 /**
  * En-têtes de sécurité appliqués à toutes les réponses.
@@ -57,7 +58,27 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  /**
+   * Redirections permanentes.
+   *
+   * L'arborescence canonique reste inchangée : une page de module vit
+   * sous /solutions/<slug>, et c'est cette URL que déclarent le sitemap,
+   * les liens internes et les balises canoniques.
+   *
+   * Les alias courts existent parce qu'un nom de module se cite seul —
+   * à l'oral, sur une affiche, dans un message. Une redirection 301 est
+   * sans risque pour le référencement : elle ne crée pas de contenu
+   * dupliqué, elle transmet l'autorité vers l'URL canonique.
+   */
   async redirects() {
+    /* Générés depuis la liste des modules : ajouter un module crée son
+       alias, sans qu'on ait à y penser ici. */
+    const moduleAliases = modules.map((m) => ({
+      source: `/${m.slug}`,
+      destination: `/solutions/${m.slug}`,
+      permanent: true,
+    }));
+
     return [
       // L'ancien prototype utilisait /liste-attente : on préserve le lien.
       {
@@ -69,11 +90,31 @@ const nextConfig: NextConfig = {
       { source: '/securite', destination: '/securite-confidentialite', permanent: true },
       { source: '/confidentialite', destination: '/politique-de-confidentialite', permanent: true },
       { source: '/conditions', destination: '/conditions-d-utilisation', permanent: true },
+
+      /* Variantes sans particule : ce sont les formes que l'on tape
+         spontanément, et celles qui reviennent le plus souvent dans les
+         liens écrits à la main. */
+      {
+        source: '/politique-confidentialite',
+        destination: '/politique-de-confidentialite',
+        permanent: true,
+      },
+      {
+        source: '/conditions-utilisation',
+        destination: '/conditions-d-utilisation',
+        permanent: true,
+      },
+      { source: '/mentions', destination: '/mentions-legales', permanent: true },
+      { source: '/cgu', destination: '/conditions-d-utilisation', permanent: true },
+
       {
         source: '/solutions/historique',
         destination: '/solutions/historique-memoire-familiale',
         permanent: true,
       },
+      { source: '/historique', destination: '/solutions/historique-memoire-familiale', permanent: true },
+
+      ...moduleAliases,
     ];
   },
 };

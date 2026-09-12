@@ -28,6 +28,7 @@ export type IconName =
   | 'close'
   | 'check'
   | 'alert'
+  | 'info'
   | 'clock'
   | 'search'
   | 'mail'
@@ -117,6 +118,15 @@ const paths: Record<IconName, React.ReactNode> = {
       <path d="M12 3.5 21 19.5H3L12 3.5Z" />
       <path d="M12 10v4" />
       <circle cx="12" cy="16.75" r="0.9" fill="currentColor" stroke="none" />
+    </>
+  ),
+
+  // Précision utile — jamais une alerte : cercle sobre, pas de triangle.
+  info: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11v5.5" />
+      <circle cx="12" cy="7.75" r="0.9" fill="currentColor" stroke="none" />
     </>
   ),
 

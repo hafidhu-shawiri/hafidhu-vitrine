@@ -3,9 +3,12 @@
  */
 
 import Link from 'next/link';
+import type { CSSProperties } from 'react';
 import { modules } from '@/content/modules';
 import { primaryCta, routes } from '@/content/navigation';
 import { finalCta } from '@/content/home';
+import { Reveal } from '@/components/motion/Reveal';
+import { stagger } from '@/components/motion/stagger';
 import { Icon } from '@/components/ui/Icon';
 import {
   ArrowLink,
@@ -102,10 +105,10 @@ export function ModuleCard({
 export function ModuleGrid({ showExample = false }: { showExample?: boolean }) {
   return (
     <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {modules.map((m) => (
-        <li key={m.slug} className="flex">
+      {modules.map((m, i) => (
+        <Reveal as="li" key={m.slug} delay={stagger(i)} className="flex">
           <ModuleCard module={m} showExample={showExample} />
-        </li>
+        </Reveal>
       ))}
     </ul>
   );
@@ -149,7 +152,7 @@ export function StepList({
   return (
     <ol className={cx('flex flex-col', className)}>
       {items.map((step, i) => (
-        <li key={step.title} className="flex gap-4">
+        <Reveal as="li" key={step.title} delay={stagger(i, 90, 450)} className="flex gap-4">
           <div className="flex shrink-0 flex-col items-center">
             <span className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-navy text-[0.875rem] font-semibold text-white">
               {i + 1}
@@ -164,7 +167,7 @@ export function StepList({
               {step.body}
             </p>
           </div>
-        </li>
+        </Reveal>
       ))}
     </ol>
   );
@@ -190,13 +193,13 @@ export function SimpleCardGrid({
         columns === 2 ? 'sm:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3'
       )}
     >
-      {items.map((item) => (
-        <li key={item.title}>
+      {items.map((item, i) => (
+        <Reveal as="li" key={item.title} delay={stagger(i)}>
           <Card tone={tone} className="h-full">
             <CardTitle>{item.title}</CardTitle>
             <CardBody className="mt-2">{item.body}</CardBody>
           </Card>
-        </li>
+        </Reveal>
       ))}
     </ul>
   );
@@ -211,20 +214,26 @@ export function FinalCta() {
   return (
     <Section tone="navy" spacing="loose">
       <Container width="narrow" className="text-center">
-        <GoldRule className="mx-auto mb-6" />
-        <h2 className="text-[1.5rem] font-bold leading-[1.25] text-white sm:text-[1.875rem] lg:text-[2.125rem]">
-          {finalCta.title}
-          <br />
-          {finalCta.subtitle}
-        </h2>
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <ButtonLink href={primaryCta.href} variant="onDark">
-            Rejoindre HAFIDHU
-          </ButtonLink>
-          <ButtonLink href={routes.contact} variant="onDarkOutline">
-            Nous écrire
-          </ButtonLink>
-        </div>
+        <Reveal variant="fade">
+          <GoldRule className="mx-auto mb-6" />
+        </Reveal>
+        <Reveal delay={80}>
+          <h2 className="text-[1.5rem] font-bold leading-[1.25] text-white sm:text-[1.875rem] lg:text-[2.125rem]">
+            {finalCta.title}
+            <br />
+            {finalCta.subtitle}
+          </h2>
+        </Reveal>
+        <Reveal delay={180}>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <ButtonLink href={primaryCta.href} variant="onDark">
+              Rejoindre HAFIDHU
+            </ButtonLink>
+            <ButtonLink href={routes.contact} variant="onDarkOutline">
+              Nous écrire
+            </ButtonLink>
+          </div>
+        </Reveal>
       </Container>
     </Section>
   );
@@ -236,10 +245,10 @@ export function FinalCta() {
 
 export function InlineCta({ text }: { text: string }) {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-4 rounded-[16px] border border-border bg-surface p-5 sm:p-6">
+    <Reveal className="flex flex-wrap items-center justify-between gap-4 rounded-[16px] border border-border bg-surface p-5 sm:p-6">
       <p className="text-[1rem] font-semibold text-navy">{text}</p>
       <ButtonLink href={primaryCta.href}>{primaryCta.label}</ButtonLink>
-    </div>
+    </Reveal>
   );
 }
 
@@ -261,19 +270,35 @@ export function PageHeader({
   children?: React.ReactNode;
 }) {
   return (
+    /*
+     * En-tête de page : au-dessus de la ligne de flottaison, donc animé
+     * en CSS pur. Chaque ligne entre légèrement après la précédente, ce
+     * qui guide naturellement la lecture du fil d'Ariane vers le titre.
+     */
     <Section spacing="tight" className="pb-0!">
       <Container width="prose">
-        <Breadcrumb trail={crumb} />
-        <p className="mt-5">
+        <div className="hfd-enter">
+          <Breadcrumb trail={crumb} />
+        </div>
+        <p className="hfd-enter mt-5" style={{ '--hfd-delay': '70ms' } as CSSProperties}>
           <span className="inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-teal">
             <span aria-hidden="true" className="block h-px w-[22px] shrink-0 bg-gold" />
             {kicker}
           </span>
         </p>
-        <SectionTitle as="h1" className="mt-4">
+        <SectionTitle
+          as="h1"
+          className="hfd-enter mt-4"
+          style={{ '--hfd-delay': '140ms' } as CSSProperties}
+        >
           {title}
         </SectionTitle>
-        <p className="mt-5 max-w-[64ch] text-[1.0625rem] leading-[1.7] text-muted">{lead}</p>
+        <p
+          className="hfd-enter mt-5 max-w-[64ch] text-[1.0625rem] leading-[1.7] text-muted"
+          style={{ '--hfd-delay': '210ms' } as CSSProperties}
+        >
+          {lead}
+        </p>
         {children}
       </Container>
     </Section>

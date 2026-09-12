@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import type { CSSProperties } from 'react';
 import {
   coBuildSection,
   diasporaSection,
@@ -18,6 +19,8 @@ import { primaryCta, routes } from '@/content/navigation';
 import { FaqAccordion } from '@/components/sections/FaqAccordion';
 import { ProductPreview } from '@/components/sections/ProductPreview';
 import { FinalCta, ModuleGrid } from '@/components/sections/shared';
+import { Reveal } from '@/components/motion/Reveal';
+import { stagger } from '@/components/motion/stagger';
 import {
   ArrowLink,
   ButtonLink,
@@ -48,30 +51,49 @@ export default function HomePage() {
       <Section spacing="loose" className="pb-10! sm:pb-14!">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+            {/*
+              Le hero est visible avant tout défilement : son animation est
+              donc purement CSS, sans JavaScript ni observateur. Les
+              éléments entrent dans l'ordre de lecture, à 80 ms
+              d'intervalle — assez pour être perçu, trop court pour faire
+              attendre.
+            */}
             <div>
-              <p>
+              <p className="hfd-enter">
                 <span className="inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-teal">
                   <span aria-hidden="true" className="block h-px w-[22px] shrink-0 bg-gold" />
                   {hero.kicker}
                 </span>
               </p>
 
-              <h1 className="mt-5 text-[1.875rem] font-bold leading-[1.14] tracking-[-0.02em] text-navy sm:text-[2.375rem] lg:text-[2.75rem]">
+              <h1
+                className="hfd-enter mt-5 text-[1.875rem] font-bold leading-[1.14] tracking-[-0.02em] text-navy sm:text-[2.375rem] lg:text-[2.75rem]"
+                style={{ '--hfd-delay': '80ms' } as CSSProperties}
+              >
                 {hero.title}
               </h1>
 
-              <p className="mt-5 max-w-[52ch] text-[1.0625rem] leading-[1.65] text-muted sm:text-[1.125rem]">
+              <p
+                className="hfd-enter mt-5 max-w-[52ch] text-[1.0625rem] leading-[1.65] text-muted sm:text-[1.125rem]"
+                style={{ '--hfd-delay': '160ms' } as CSSProperties}
+              >
                 {hero.lead}
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div
+                className="hfd-enter mt-8 flex flex-wrap gap-3"
+                style={{ '--hfd-delay': '240ms' } as CSSProperties}
+              >
                 <ButtonLink href={primaryCta.href}>{primaryCta.label}</ButtonLink>
                 <ButtonLink href={routes.solutions} variant="secondary">
                   Découvrir HAFIDHU
                 </ButtonLink>
               </div>
 
-              <p className="mt-7 inline-flex items-center gap-2.5 rounded-[999px] border border-border bg-surface px-3.5 py-2 text-[0.8125rem] text-muted-strong">
+              <p
+                className="hfd-enter mt-7 inline-flex items-center gap-2.5 rounded-[999px] border border-border bg-surface px-3.5 py-2 text-[0.8125rem] text-muted-strong"
+                style={{ '--hfd-delay': '320ms' } as CSSProperties}
+              >
                 <span aria-hidden="true" className="h-[7px] w-[7px] shrink-0 rounded-full bg-gold" />
                 {hero.statusNote}
               </p>
@@ -81,7 +103,10 @@ export default function HomePage() {
                 hauteur naturelle déséquilibrerait le hero : elle est donc
                 plafonnée, le cadrage restant centré sur les visages.
                 Sur mobile, elle est affichée dans ses proportions natives. */}
-            <figure className="m-0 min-w-0">
+            <figure
+              className="hfd-enter m-0 min-w-0"
+              style={{ '--hfd-delay': '140ms' } as CSSProperties}
+            >
               <div className="relative overflow-hidden rounded-[16px] border border-border bg-surface-subtle">
                 <Image
                   src={heroImages.couple.src}
@@ -107,13 +132,13 @@ export default function HomePage() {
       <Section tone="white">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-start lg:gap-14">
-            <div>
+            <Reveal>
               <SectionTitle>{problemSection.title}</SectionTitle>
               <p className="mt-4 max-w-[62ch] text-[1.0625rem] leading-[1.65] text-muted">
                 {problemSection.lead}
               </p>
-            </div>
-            <figure className="m-0 min-w-0">
+            </Reveal>
+            <Reveal as="figure" delay={120} className="m-0 min-w-0">
               <div className="overflow-hidden rounded-[16px] border border-border">
                 <Image
                   src={keyImages.mafunvu.src}
@@ -129,17 +154,17 @@ export default function HomePage() {
               <figcaption className="mt-2.5 text-[0.75rem] text-muted">
                 Le carnet, la table, les enveloppes : l’organisation existe déjà.
               </figcaption>
-            </figure>
+            </Reveal>
           </div>
 
           <ul className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {problemSection.items.map((item) => (
-              <li key={item.title}>
+            {problemSection.items.map((item, i) => (
+              <Reveal as="li" key={item.title} delay={stagger(i)}>
                 <Card tone="ivory" className="h-full">
                   <CardTitle>{item.title}</CardTitle>
                   <CardBody className="mt-2">{item.body}</CardBody>
                 </Card>
-              </li>
+              </Reveal>
             ))}
           </ul>
         </Container>
@@ -148,9 +173,13 @@ export default function HomePage() {
       {/* ═══ PROPOSITION DE VALEUR ══════════════════════════════ */}
       <Section spacing="loose">
         <Container width="narrow" className="text-center">
-          <GoldRule className="mx-auto mb-6" />
-          <SectionTitle className="leading-[1.3]">{valueSection.title}</SectionTitle>
-          <p className="mt-5 text-[1.0625rem] leading-[1.7] text-muted">{valueSection.body}</p>
+          <Reveal variant="fade">
+            <GoldRule className="mx-auto mb-6" />
+          </Reveal>
+          <Reveal delay={80}>
+            <SectionTitle className="leading-[1.3]">{valueSection.title}</SectionTitle>
+            <p className="mt-5 text-[1.0625rem] leading-[1.7] text-muted">{valueSection.body}</p>
+          </Reveal>
         </Container>
       </Section>
 
@@ -158,7 +187,7 @@ export default function HomePage() {
       <Section tone="white" id="apercu">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-            <div>
+            <Reveal>
               <SectionTitle>Ce que HAFIDHU rend lisible.</SectionTitle>
               <p className="mt-4 max-w-[52ch] text-[1rem] leading-[1.7] text-muted">
                 Un groupe, ses membres, une échéance. Ce qui a été reçu, ce qui reste attendu, ce qui
@@ -171,16 +200,16 @@ export default function HomePage() {
               <div className="mt-7">
                 <ArrowLink href={`${routes.solutions}/mtsango`}>Découvrir Mtsango</ArrowLink>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="min-w-0">
+            <Reveal delay={140} className="min-w-0">
               <ProductPreview
                 title={homePreview.title}
                 sub={homePreview.sub}
                 rows={homePreview.rows}
                 stats={homePreview.stats}
               />
-            </div>
+            </Reveal>
           </div>
         </Container>
       </Section>
@@ -188,8 +217,10 @@ export default function HomePage() {
       {/* ═══ ÉCOSYSTÈME ════════════════════════════════════════ */}
       <Section spacing="loose" id="solutions">
         <Container>
-          <SectionTitle>{ecosystemSection.title}</SectionTitle>
-          <p className="mt-3 max-w-[58ch] text-[1rem] text-muted">{ecosystemSection.lead}</p>
+          <Reveal>
+            <SectionTitle>{ecosystemSection.title}</SectionTitle>
+            <p className="mt-3 max-w-[58ch] text-[1rem] text-muted">{ecosystemSection.lead}</p>
+          </Reveal>
           <div className="mt-8">
             <ModuleGrid />
           </div>
@@ -200,7 +231,7 @@ export default function HomePage() {
       <Section tone="white">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-            <div>
+            <Reveal>
               <SectionTitle>{traditionSection.title}</SectionTitle>
               {traditionSection.paragraphs.map((p) => (
                 <p key={p} className="mt-4 text-[1rem] leading-[1.7] text-muted">
@@ -210,9 +241,9 @@ export default function HomePage() {
               <div className="mt-7">
                 <ArrowLink href={routes.vision}>Notre vision</ArrowLink>
               </div>
-            </div>
+            </Reveal>
 
-            <figure className="m-0 min-w-0">
+            <Reveal as="figure" delay={140} className="m-0 min-w-0">
               <div className="overflow-hidden rounded-[16px] border border-border">
                 <Image
                   src={keyImages.famille.src}
@@ -225,7 +256,7 @@ export default function HomePage() {
                   className="h-auto w-full"
                 />
               </div>
-            </figure>
+            </Reveal>
           </div>
         </Container>
       </Section>
@@ -234,7 +265,7 @@ export default function HomePage() {
       <Section spacing="loose">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-            <div>
+            <Reveal>
               <SectionTitle>{diasporaSection.title}</SectionTitle>
               {diasporaSection.paragraphs.map((p) => (
                 <p key={p} className="mt-4 text-[1rem] leading-[1.7] text-muted">
@@ -244,10 +275,10 @@ export default function HomePage() {
               <div className="mt-7">
                 <ArrowLink href={`${routes.solutions}/diaspora`}>Diaspora</ArrowLink>
               </div>
-            </div>
+            </Reveal>
 
             <div className="min-w-0">
-              <figure className="m-0 overflow-hidden rounded-[16px] border border-border">
+              <Reveal as="figure" delay={140} className="m-0 overflow-hidden rounded-[16px] border border-border">
                 <Image
                   src={keyImages.diaspora.src}
                   alt={keyImages.diaspora.alt}
@@ -258,12 +289,14 @@ export default function HomePage() {
                   sizes="(max-width: 1023px) 100vw, 46vw"
                   className="h-auto w-full"
                 />
-              </figure>
+              </Reveal>
 
               <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-                {diasporaSection.steps.map((step) => (
-                  <li
+                {diasporaSection.steps.map((step, i) => (
+                  <Reveal
+                    as="li"
                     key={step.title}
+                    delay={stagger(i, 80)}
                     className="rounded-[12px] border border-border bg-surface p-4"
                   >
                     <p className="flex items-start gap-2 text-[0.9375rem] font-semibold text-navy">
@@ -271,7 +304,7 @@ export default function HomePage() {
                       {step.title}
                     </p>
                     <p className="mt-1.5 text-[0.8125rem] leading-[1.6] text-muted">{step.body}</p>
-                  </li>
+                  </Reveal>
                 ))}
               </ul>
             </div>
@@ -282,37 +315,45 @@ export default function HomePage() {
       {/* ═══ CONFIANCE ═════════════════════════════════════════ */}
       <Section tone="white">
         <Container>
-          <SectionTitle>{trustSection.title}</SectionTitle>
-          <p className="mt-3 max-w-[62ch] text-[1rem] text-muted">{trustSection.lead}</p>
+          <Reveal>
+            <SectionTitle>{trustSection.title}</SectionTitle>
+            <p className="mt-3 max-w-[62ch] text-[1rem] text-muted">{trustSection.lead}</p>
+          </Reveal>
 
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {trustSection.items.map((item) => (
-              <li key={item.title}>
+            {trustSection.items.map((item, i) => (
+              <Reveal as="li" key={item.title} delay={stagger(i)}>
                 <Card tone="ivory" className="h-full">
                   <CardTitle>{item.title}</CardTitle>
                   <CardBody className="mt-2">{item.body}</CardBody>
                 </Card>
-              </li>
+              </Reveal>
             ))}
           </ul>
 
-          <p className="mt-6 flex flex-wrap items-center gap-2 text-[0.8125rem] text-muted">
+          <Reveal
+            as="span"
+            variant="fade"
+            className="mt-6 flex flex-wrap items-center gap-2 text-[0.8125rem] text-muted"
+          >
             <Icon name="shield" size={16} className="text-teal" />
             {trustSection.disclaimer}
             <ArrowLink href={routes.security} className="text-[0.8125rem]">
               Voir nos principes de sécurité
             </ArrowLink>
-          </p>
+          </Reveal>
         </Container>
       </Section>
 
       {/* ═══ COMMENT ÇA MARCHE ═════════════════════════════════ */}
       <Section spacing="loose">
         <Container>
-          <SectionTitle>{stepsSection.title}</SectionTitle>
+          <Reveal>
+            <SectionTitle>{stepsSection.title}</SectionTitle>
+          </Reveal>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {stepsSection.items.map((step) => (
-              <li key={step.n}>
+            {stepsSection.items.map((step, i) => (
+              <Reveal as="li" key={step.n} delay={stagger(i, 80)}>
                 <Card className="h-full">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-[8px] bg-navy text-[0.9375rem] font-semibold text-white">
                     {step.n}
@@ -320,19 +361,19 @@ export default function HomePage() {
                   <CardTitle className="mt-4">{step.title}</CardTitle>
                   <CardBody className="mt-2">{step.body}</CardBody>
                 </Card>
-              </li>
+              </Reveal>
             ))}
           </ul>
-          <div className="mt-7">
+          <Reveal className="mt-7">
             <ArrowLink href={routes.howItWorks}>Voir le parcours complet</ArrowLink>
-          </div>
+          </Reveal>
         </Container>
       </Section>
 
       {/* ═══ CO-CONSTRUCTION ═══════════════════════════════════ */}
       <Section tone="white" spacing="tight">
         <Container>
-          <div className="grid items-center gap-8 rounded-[16px] border border-border bg-ivory p-6 sm:p-9 lg:grid-cols-[1.2fr_0.8fr]">
+          <Reveal className="grid items-center gap-8 rounded-[16px] border border-border bg-ivory p-6 sm:p-9 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
               <SectionTitle as="h2">{coBuildSection.title}</SectionTitle>
               <p className="mt-4 text-[1rem] leading-[1.7] text-muted">{coBuildSection.body}</p>
@@ -343,20 +384,22 @@ export default function HomePage() {
                 Participer à la validation
               </ButtonLink>
             </div>
-          </div>
+          </Reveal>
         </Container>
       </Section>
 
       {/* ═══ FAQ ═══════════════════════════════════════════════ */}
       <Section spacing="loose">
         <Container width="narrow">
-          <SectionTitle>Questions fréquentes</SectionTitle>
-          <div className="mt-7">
+          <Reveal>
+            <SectionTitle>Questions fréquentes</SectionTitle>
+          </Reveal>
+          <Reveal delay={100} className="mt-7">
             <FaqAccordion entries={faqHome} />
-          </div>
-          <div className="mt-6">
+          </Reveal>
+          <Reveal delay={160} className="mt-6">
             <ArrowLink href={routes.faq}>Voir toutes les questions</ArrowLink>
-          </div>
+          </Reveal>
         </Container>
       </Section>
 

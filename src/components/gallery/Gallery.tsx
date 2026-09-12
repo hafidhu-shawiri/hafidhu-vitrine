@@ -16,6 +16,8 @@
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { ManagedImage } from '@/content/images';
+import { Reveal } from '@/components/motion/Reveal';
+import { stagger } from '@/components/motion/stagger';
 import { Icon } from '@/components/ui/Icon';
 import { cx } from '@/components/ui/primitives';
 
@@ -150,8 +152,21 @@ export function Gallery({ items }: { items: readonly GalleryItem[] }) {
 
       {/* ── Maçonnerie ───────────────────────────────────────── */}
       <ul className="mt-6 columns-2 gap-3 sm:gap-4 md:columns-3 lg:columns-4 [&>li]:mb-3 sm:[&>li]:mb-4">
+        {/*
+          Le décalage suit la position dans la rangée, pas l'index global :
+          sur 77 images, un décalage cumulatif ferait attendre les
+          dernières plusieurs secondes. Ici, chaque rangée se pose en
+          moins de 200 ms, et seules les images entrant réellement dans le
+          champ sont animées.
+        */}
         {visible.map((item, index) => (
-          <li key={item.id} className="break-inside-avoid">
+          <Reveal
+            as="li"
+            key={item.id}
+            variant="fade"
+            delay={stagger(index % 4, 60, 180)}
+            className="break-inside-avoid"
+          >
             <button
               type="button"
               onClick={(e) => {
@@ -169,11 +184,11 @@ export function Gallery({ items }: { items: readonly GalleryItem[] }) {
                 blurDataURL={item.blurDataURL}
                 loading={index < 8 ? 'eager' : 'lazy'}
                 sizes="(max-width: 639px) 50vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 25vw"
-                className="h-auto w-full transition-transform duration-200 group-hover:scale-[1.02]"
+                className="h-auto w-full transition-transform duration-300 ease-out group-hover:scale-[1.02] motion-reduce:group-hover:scale-100"
               />
               <span
                 aria-hidden="true"
-                className="absolute inset-0 flex items-end justify-end bg-navy/0 p-2 opacity-0 transition-opacity duration-150 group-hover:bg-navy/15 group-hover:opacity-100 group-focus-visible:opacity-100"
+                className="absolute inset-0 flex items-end justify-end bg-navy/0 p-2 opacity-0 transition-opacity duration-200 group-hover:bg-navy/15 group-hover:opacity-100 group-focus-visible:opacity-100"
               >
                 <span className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-white text-navy">
                   <Icon name="expand" size={16} />
@@ -181,7 +196,7 @@ export function Gallery({ items }: { items: readonly GalleryItem[] }) {
               </span>
               <span className="sr-only">Agrandir : {item.alt}</span>
             </button>
-          </li>
+          </Reveal>
         ))}
       </ul>
 
@@ -192,7 +207,7 @@ export function Gallery({ items }: { items: readonly GalleryItem[] }) {
           role="dialog"
           aria-modal="true"
           aria-label={`Image ${openIndex + 1} sur ${visible.length}`}
-          className="fixed inset-0 z-50 flex flex-col bg-navy/95 p-3 sm:p-6"
+          className="hfd-enter fixed inset-0 z-50 flex flex-col bg-navy/95 p-3 sm:p-6"
         >
           <div className="flex items-center justify-between gap-3">
             <p className="text-[0.8125rem] text-white/75">

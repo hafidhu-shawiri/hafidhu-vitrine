@@ -12,36 +12,63 @@ import {
   Card,
   CardBody,
   Container,
+  InfoBox,
   NoticeBox,
   Section,
   SectionTitle,
 } from '@/components/ui/primitives';
 import { Icon } from '@/components/ui/Icon';
+import { Reveal } from '@/components/motion/Reveal';
+import { stagger } from '@/components/motion/stagger';
 import { InlineCta, PageHeader, StepList } from './shared';
+
+/** Un texte ou une suite de paragraphes, rendus de façon identique. */
+function Paragraphs({
+  value,
+  className,
+}: {
+  value: string | readonly string[];
+  className?: string;
+}) {
+  const list = typeof value === 'string' ? [value] : value;
+
+  return (
+    <div className={className}>
+      {list.map((text, i) => (
+        <p
+          key={i}
+          className={`text-[0.9375rem] leading-[1.75] text-muted${i > 0 ? ' mt-3.5' : ''}`}
+        >
+          {text}
+        </p>
+      ))}
+    </div>
+  );
+}
 
 function BlockRenderer({ block }: { block: Block }) {
   switch (block.type) {
     case 'prose':
       return (
-        <div className="flex flex-col gap-4">
+        <Reveal className="flex flex-col gap-4">
           {block.items.map((item, i) => (
             <p key={i} className="text-[1rem] leading-[1.75] text-muted">
               {item.body}
             </p>
           ))}
-        </div>
+        </Reveal>
       );
 
     case 'cards':
       return (
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {block.items.map((item) => (
-            <li key={item.title}>
+          {block.items.map((item, i) => (
+            <Reveal as="li" key={item.title} delay={stagger(i)}>
               <Card className="h-full">
                 <h3 className="text-[1rem] font-semibold text-navy">{item.title}</h3>
                 <CardBody className="mt-2">{item.body}</CardBody>
               </Card>
-            </li>
+            </Reveal>
           ))}
         </ul>
       );
@@ -49,8 +76,8 @@ function BlockRenderer({ block }: { block: Block }) {
     case 'categories':
       return (
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {block.items.map((item) => (
-            <li key={item.title}>
+          {block.items.map((item, i) => (
+            <Reveal as="li" key={item.title} delay={stagger(i)}>
               <Card className="h-full">
                 <span
                   aria-hidden="true"
@@ -59,7 +86,7 @@ function BlockRenderer({ block }: { block: Block }) {
                 <h3 className="text-[1rem] font-semibold text-navy">{item.title}</h3>
                 <CardBody className="mt-2">{item.body}</CardBody>
               </Card>
-            </li>
+            </Reveal>
           ))}
         </ul>
       );
@@ -69,17 +96,47 @@ function BlockRenderer({ block }: { block: Block }) {
 
     case 'legal':
       return (
-        <div className="flex flex-col gap-7">
-          {block.items.map((item) => (
-            <div key={item.title}>
+        <div className="flex flex-col gap-8">
+          {block.items.map((item, i) => (
+            <Reveal as="article" key={item.title} delay={stagger(i, 60, 240)}>
               <h3 className="text-[1.0625rem] font-semibold text-navy">{item.title}</h3>
-              <p className="mt-2.5 text-[0.9375rem] leading-[1.7] text-muted">{item.body}</p>
+
+              <Paragraphs value={item.body} className="mt-2.5" />
+
+              {item.list ? (
+                <>
+                  {item.listLead ? (
+                    <p className="mt-3.5 text-[0.9375rem] leading-[1.7] text-muted">
+                      {item.listLead}
+                    </p>
+                  ) : null}
+                  <ul className="mt-3 flex flex-col gap-2">
+                    {item.list.map((entry) => (
+                      <li
+                        key={entry}
+                        className="flex items-start gap-2.5 text-[0.9375rem] leading-[1.65] text-muted"
+                      >
+                        <span
+                          aria-hidden="true"
+                          className="mt-[0.6em] block h-1 w-1 shrink-0 rounded-full bg-gold"
+                        />
+                        <span>{entry}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
+
+              {item.after ? <Paragraphs value={item.after} className="mt-3.5" /> : null}
+
+              {item.note ? <InfoBox className="mt-4">{item.note}</InfoBox> : null}
+
               {item.todo ? (
                 <NoticeBox className="mt-3">
                   <span className="font-semibold">À compléter :</span> {item.todo}
                 </NoticeBox>
               ) : null}
-            </div>
+            </Reveal>
           ))}
         </div>
       );
@@ -87,7 +144,7 @@ function BlockRenderer({ block }: { block: Block }) {
     case 'contact':
       return (
         <ul className="grid gap-4 sm:grid-cols-2">
-          <li>
+          <Reveal as="li">
             <Card className="h-full">
               <Icon name="mail" size={20} className="text-teal" />
               <h3 className="mt-3 text-[1rem] font-semibold text-navy">Écrire</h3>
@@ -98,8 +155,8 @@ function BlockRenderer({ block }: { block: Block }) {
                 {contact.email}
               </a>
             </Card>
-          </li>
-          <li>
+          </Reveal>
+          <Reveal as="li" delay={80}>
             <Card className="h-full">
               <Icon name="phone" size={20} className="text-teal" />
               <h3 className="mt-3 text-[1rem] font-semibold text-navy">Téléphone & WhatsApp</h3>
@@ -110,7 +167,7 @@ function BlockRenderer({ block }: { block: Block }) {
                 {contact.phone}
               </a>
             </Card>
-          </li>
+          </Reveal>
         </ul>
       );
 
@@ -141,9 +198,11 @@ export function EditorialPageView({
             {page.blocks.map((block, i) => (
               <div key={i}>
                 {'title' in block && block.title ? (
-                  <SectionTitle as="h2" className="mb-5 text-[1.3125rem]! sm:text-[1.5rem]!">
-                    {block.title}
-                  </SectionTitle>
+                  <Reveal>
+                    <SectionTitle as="h2" className="mb-5 text-[1.3125rem]! sm:text-[1.5rem]!">
+                      {block.title}
+                    </SectionTitle>
+                  </Reveal>
                 ) : null}
                 <BlockRenderer block={block} />
               </div>

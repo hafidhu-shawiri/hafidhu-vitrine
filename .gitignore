@@ -79,3 +79,10 @@ desktop.ini
 tmp/
 temp/
 .cache/
+
+# ─────────────────────────────────────────────────────────────
+# Supabase — cache local de la CLI.
+# Les migrations, elles, sont versionnées : supabase/migrations/
+# ─────────────────────────────────────────────────────────────
+supabase/.temp/
+supabase/.branches/

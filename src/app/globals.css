@@ -231,7 +231,79 @@
   }
 }
 
-/* Respect absolu de la préférence système : aucune animation imposée. */
+/* ═══════════════════════════════════════════════════════════════════
+   MOUVEMENT
+   « Minimalisme chaleureux » appliqué à l'animation.
+
+   Trois règles, tenues sans exception :
+     1. opacité et translation de quelques pixels — jamais de zoom,
+        de rotation, de lueur ni de particule ;
+     2. une animation se joue UNE fois, puis l'élément est au repos.
+        Rien ne bouge en permanence sur ce site ;
+     3. le contenu doit rester lisible si l'animation ne se joue pas.
+
+   Deux mécanismes distincts, pour deux situations distinctes :
+     • .hfd-enter  — au-dessus de la ligne de flottaison. Animation CSS
+       pure : elle se joue au chargement, sans JavaScript. Aucun risque
+       de contenu invisible.
+     • .hfd-reveal — au défilement. L'état masqué n'est posé QUE si le
+       navigateur exécute des scripts (@media scripting), donc seulement
+       si le code capable de le lever tourne réellement.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Décélération douce : rapide au départ, posée à l'arrivée.
+   Ni rebond, ni élasticité — l'interface ne joue pas. */
+@theme {
+  --ease-hfd: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes hfd-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer utilities {
+  .hfd-enter {
+    animation: hfd-enter 0.62s var(--ease-hfd) both;
+    animation-delay: var(--hfd-delay, 0ms);
+  }
+}
+
+@media (scripting: enabled) {
+  .hfd-reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.6s var(--ease-hfd) var(--hfd-delay, 0ms),
+      transform 0.6s var(--ease-hfd) var(--hfd-delay, 0ms);
+  }
+
+  .hfd-reveal--fade {
+    transform: none;
+  }
+
+  .hfd-reveal--left {
+    transform: translate3d(-16px, 0, 0);
+  }
+
+  .hfd-reveal--right {
+    transform: translate3d(16px, 0, 0);
+  }
+
+  .hfd-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Respect absolu de la préférence système : aucune animation imposée.
+   Le contenu est alors présent d'emblée — il n'attend aucun défilement. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -244,5 +316,14 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .hfd-enter,
+  .hfd-reveal,
+  .hfd-reveal.is-visible {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

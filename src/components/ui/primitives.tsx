@@ -7,7 +7,12 @@
  */
 
 import Link from 'next/link';
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  CSSProperties,
+  ReactNode,
+} from 'react';
 import { Icon, type IconName } from './Icon';
 
 export function cx(...parts: (string | false | null | undefined)[]): string {
@@ -98,10 +103,13 @@ export function SectionTitle({
   children,
   as: Tag = 'h2',
   className,
+  style,
 }: {
   children: ReactNode;
   as?: 'h1' | 'h2' | 'h3';
   className?: string;
+  /** Permet de porter le décalage d'entrée (--hfd-delay). */
+  style?: CSSProperties;
 }) {
   const size =
     Tag === 'h1'
@@ -110,7 +118,11 @@ export function SectionTitle({
         ? 'text-[1.5rem] sm:text-[1.75rem] lg:text-[2rem] leading-[1.2]'
         : 'text-[1.25rem] sm:text-[1.375rem] leading-[1.3]';
 
-  return <Tag className={cx('font-bold text-navy', size, className)}>{children}</Tag>;
+  return (
+    <Tag className={cx('font-bold text-navy', size, className)} style={style}>
+      {children}
+    </Tag>
+  );
 }
 
 export function Lead({ children, className }: { children: ReactNode; className?: string }) {
@@ -132,19 +144,27 @@ type Variant = 'primary' | 'secondary' | 'ghost' | 'onDark' | 'onDarkOutline';
 
 const variantClass: Record<Variant, string> = {
   primary:
-    'bg-teal text-white border border-teal hover:bg-teal-hover hover:text-white active:bg-teal-hover',
+    'bg-teal text-white border border-teal hover:bg-teal-hover hover:text-white hover:shadow-sm active:bg-teal-hover',
   secondary:
-    'bg-surface text-teal border border-teal hover:bg-surface-subtle hover:text-teal-hover',
+    'bg-surface text-teal border border-teal hover:bg-surface-subtle hover:text-teal-hover hover:shadow-sm',
   ghost: 'bg-transparent text-teal border border-transparent hover:bg-surface-subtle',
   onDark: 'bg-white text-teal border border-white hover:bg-surface-subtle hover:text-teal',
   onDarkOutline:
-    'bg-transparent text-white border border-white/45 hover:border-gold hover:text-white',
+    'bg-transparent text-white border border-white/45 hover:border-gold hover:bg-white/5 hover:text-white',
 };
 
+/*
+ * Le bouton réagit sur trois plans : la couleur, une ombre très légère au
+ * survol et un appui d'un pixel au clic. Trois signaux discrets qui
+ * suffisent à faire sentir que l'élément est vivant — sans agrandissement
+ * ni rebond, qui donneraient au site un ton qui n'est pas le sien.
+ */
 const baseButton =
   'inline-flex items-center justify-center gap-2 rounded-[12px] px-5 min-h-[44px] ' +
-  'text-[0.9375rem] font-semibold no-underline transition-colors duration-150 ' +
-  'disabled:opacity-60 disabled:cursor-not-allowed';
+  'text-[0.9375rem] font-semibold no-underline ' +
+  'transition-[color,background-color,border-color,box-shadow,transform] duration-200 ease-out ' +
+  'active:translate-y-px motion-reduce:active:translate-y-0 ' +
+  'disabled:opacity-60 disabled:cursor-not-allowed disabled:active:translate-y-0';
 
 export function ButtonLink({
   href,
@@ -212,7 +232,8 @@ export function ArrowLink({
       href={href}
       className={cx(
         'group inline-flex items-center gap-1.5 border-b border-teal/30 pb-0.5 text-[0.9375rem] ' +
-          'font-semibold text-teal no-underline transition-colors hover:border-teal hover:text-teal-hover',
+          'font-semibold text-teal no-underline transition-colors duration-200 ' +
+          'hover:border-teal hover:text-teal-hover',
         className
       )}
     >
@@ -220,7 +241,7 @@ export function ArrowLink({
       <Icon
         name="arrow-right"
         size={16}
-        className="transition-transform duration-150 group-hover:translate-x-0.5"
+        className="transition-transform duration-200 ease-out group-hover:translate-x-1 motion-reduce:group-hover:translate-x-0"
       />
     </Link>
   );
@@ -246,7 +267,13 @@ export function Card({
       className={cx(
         'rounded-[16px] border border-border p-5 sm:p-6',
         tone === 'white' ? 'bg-surface' : 'bg-ivory',
-        interactive && 'transition-colors duration-150 hover:border-teal',
+        /* Deux pixels de soulèvement et une ombre douce : la carte
+           répond, elle ne saute pas. Toute translation est annulée
+           lorsque le visiteur demande moins de mouvement. */
+        interactive &&
+          'transition-[transform,box-shadow,border-color] duration-200 ease-out ' +
+            'hover:-translate-y-0.5 hover:border-teal hover:shadow-md ' +
+            'motion-reduce:hover:translate-y-0 motion-reduce:transition-none',
         className
       )}
     >
@@ -301,6 +328,28 @@ export function PreviewBadge({ className }: { className?: string }) {
     >
       Aperçu
     </span>
+  );
+}
+
+/**
+ * Encadré informatif neutre.
+ *
+ * À ne pas confondre avec NoticeBox : celui-ci PRÉCISE une règle utile au
+ * lecteur, il ne signale aucun manque. Le fond reste sobre pour que
+ * l'ambre de NoticeBox conserve sa valeur d'alerte.
+ */
+export function InfoBox({ children, className }: { children: ReactNode; className?: string }) {
+  return (
+    <p
+      className={cx(
+        'flex items-start gap-2.5 rounded-[12px] border border-border bg-surface-subtle ' +
+          'px-3.5 py-3 text-[0.8125rem] leading-[1.6] text-ink',
+        className
+      )}
+    >
+      <Icon name="info" size={16} className="mt-0.5 shrink-0 text-teal" />
+      <span>{children}</span>
+    </p>
   );
 }
 
